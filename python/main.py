@@ -1,4 +1,4 @@
-from initial_conditionsal_conditions import set_initial_conditions
+from initial_conditions import set_initial_conditions
 from unit_conversions import convert_units
 from trajectoy import calculate_height
 
