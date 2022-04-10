@@ -1,19 +1,17 @@
-%%%% RENAME from mini_project.m to (your_project_short_name).m
-% Comments describing mini-project ~ 100-200 words
+% N (10:10:100):
+N = 100
+n = (0:1:N)
 
-% Simulation parameters
-%	These are values particular to the simulation 
-%	that do not change later in the script
 
-% Computed parameters (from simulation parameters)
-%	These are values that do not change later in the script
-%	and are calculated from formulas using the simulation parameters
+for i = N;
+    for j = n;
+        probability = calculate_probability(N,n)
+        plot(n, probability)
 
-% Function calls and simple calculations for:
-%	data read-in
-%	simulation solution 
-%	visualization
+    end
+end
 
-% Function definitions for simulation solution & visualization
-%	Each function contains help text: https://www.mathworks.com/help/matlab/matlab_prog/add-help-for-your-program.html
+function probability = calculate_probability(N,n)
+    probability = (1/2.^N) .* factorial(N) ./ (factorial(n) .* factorial(N-n));
 
+end
