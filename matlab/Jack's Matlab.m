@@ -61,3 +61,20 @@ ylabel('Thermal Energy Converted (J)')
 url = 'http://hyperphysics.phy-astr.gsu.edu/hbase/Tables/wirega.html';
 data = webread(url);
 whos data
+
+%% Draft code comments
+%1)When I tried to run the code, I had some issues with the data table link, but other than that i'm sure the code works fine. It could just be because I copied it 
+%wrong or something really simple.
+
+%2)I'm sure the output of the code is fine, judging from the amount of effort I can see from the code above.
+
+%3)The code is perfectly understandable and neatly organized, I would change nothing about it.
+
+%4)Every part of the code is neatly commented and I can see thought process.
+
+%5)Some the Bigger words could be simpiflied but thats just my personal choice, other than that everything looks great.
+
+%6)Everything looks well covered, so I don't see anything that needs be removed or added.
+
+%7)Since I couldn't get the code to run correctly, I can't really judge it. But by looking at the code I can see that the graph's x and Y are labeled, so im sure the
+%is nice.
