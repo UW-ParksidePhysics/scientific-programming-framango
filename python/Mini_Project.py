@@ -14,28 +14,31 @@ import matplotlib.pyplot as plt
 N = 100
 n = linspace(0, N)
 
-for i in n:
-
 
 # Function of probability using the multiplicities of the macro and total of all
 def probability_function(N, n):
-    p = (1 / 2 ** N) * factorial(N) / (factorial(n) * factorial(N - n))
+    p = (1 / 2 ** N) * (factorial(N)) / (factorial(n) * factorial(N - n))
 
     return p
 
 
 # Definition for factorial:
-def factorial():
-    n = 200
+def factorial(x):
+
     fact = 1
-    for k in range(1, n + 1):
+    for k in range(1, x + 1):
         fact = fact * k
-        return fact
+    return fact
 
-#Print statement to test if probability works
-print(probability_function(100, 5))
 
-#Plotting n values on the x-axis and the probability on the y-axis
-plt.plot(n,p, color='black')
-plt.xlabel(r'$n-value$')
-plt.ylabel(r'$probability$')
+# Print statement to test if probability works
+print(probability_function(100, 50))
+# Crete a for loop that reads multiple values of n
+for i in n:
+
+    
+# Plotting n values on the x-axis and the probability on the y-axis
+# plt.plot(n, probability_function, color='black')
+# plt.xlabel(r'$n-value$')
+# plt.ylabel(r'$probability$')
+# plt.show()
