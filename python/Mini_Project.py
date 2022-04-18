@@ -8,6 +8,7 @@ from math import *
 from numpy import *
 from matplotlib import *
 import matplotlib.pyplot as plt
+#Future N for multiple probabilities, and n should be going 0 to N
 # N = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 N = 100
 n = linspace(0, N)
@@ -15,14 +16,14 @@ n = linspace(0, N)
 
 for i in n:
 
-
+#Function of probability using the multiplicities of the macro and total of all
 def probability_function(N,n):
 
     p = (1/2**N) * factorial(N) / (factorial(n) * factorial(N-n))
 
     return p
 
-
+#Definition for factorial:
 def factorial():
     n=200
     fact = 1
