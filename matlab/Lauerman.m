@@ -37,6 +37,8 @@ for i = n
         
     end
      plot(0:1:j, probabilities)
+     xlabel('n-value')
+     ylabel('Probability')
 end
 
 function probability = calculate_probability(N,n)
