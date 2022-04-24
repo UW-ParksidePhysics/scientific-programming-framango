@@ -25,6 +25,7 @@
 %P=MA/MM
 %plot(n,P)
 %-------------------------------------------------------------------------------------------------
+%Setting the N-value and n-values for the graph
 N = 100
 n = 0:1:N
 
@@ -36,11 +37,12 @@ for i = n
         probabilities = [probabilities, probability]
         
     end
+    %Plotting the graph with the x being the n-values and the Y being the calculated probabilities
      plot(0:1:j, probabilities)
      xlabel('n-value')
      ylabel('Probability')
 end
-
+%Function of the Probabilities
 function probability = calculate_probability(N,n)
     probability = (1/2.^N) .* factorial(N) ./ (factorial(n) .* factorial(N-n));
     
