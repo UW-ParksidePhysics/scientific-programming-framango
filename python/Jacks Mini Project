@@ -65,3 +65,13 @@ plt.xlabel('Radii(cm)')
 plt.ylabel('Thermal Energy Converted (J)')
 plt.legend(loc="upper left")
 plt.show()
+
+##Draft code comments
+#1)Code mruns great
+#2)Output of the code looks fine.
+#3)Code is simple to understand.
+#4)Code comments clearly define sections
+#5)Variables are alright.
+#6)nothing seems to over or under done
+#7)everthing makes logical sense,so I see nothing to improve upon.
+#8)Looks all good
