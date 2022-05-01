@@ -1,5 +1,5 @@
-# Goal is to plot a single graph of probability of a two state system, then later multiple graphs. Probality equals
-# the multiplicity of the macrostate over the multiplicity of the entire system, which is in line 43 N is the total
+# Goal is to plot a single graph of probability of a two state system. 
+# Probality equals the multiplicity of the macrostate over the multiplicity of the entire system, which is in line 43 N is the total
 # amount of chances of the system and n being the secondary amount.(ex. total amount of coins flipped is 100(N),
 # with 20 head and 80(n) tails.) multiplicity of the entire system is calculated use 2^N, 2 being there because it's
 # a two state system and N being the total amount of coins flipped. multiplicity of a macrostate is calculated using
@@ -9,7 +9,7 @@ from numpy import *
 import matplotlib.pyplot as plt
 N = 100
 
-
+#N values
 def n_array(big_n):
     n_ray = []
     for i in range(0, N + 1, 2):
@@ -20,7 +20,7 @@ def n_array(big_n):
             break
     return n_ray
 
-
+#Factororial function for multiple n and singular use
 def factorial(n_input):
     if type(n_input) != int:
         factorial_n_array = []
@@ -36,7 +36,7 @@ def factorial(n_input):
             fact = fact * k
         return fact
 
-
+#Probability function
 def probability_function(n_ray_ray):
     probability_array = []
     for i in n_ray_ray:
@@ -44,12 +44,12 @@ def probability_function(n_ray_ray):
         probability_array.append(probability)
     return probability_array
 
-
+#Plotting code
 plt.plot((n_array(N)), probability_function(n_array(N)), color='black')
 plt.xlabel(r'n-value')
 plt.ylabel(r'probability')
 plt.show()
-
+#TESTING CODE
 # if '__name__' == '__main__':
 # print(n_array(N))
 # print(factorial(N))
