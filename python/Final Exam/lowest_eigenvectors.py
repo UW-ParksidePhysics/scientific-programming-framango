@@ -1,3 +1,4 @@
+__author__ = 'Adrian Sanchez'
 import numpy as np
 
 
@@ -8,4 +9,4 @@ def lowest_eigenvectors(square_matrix, number_of_eigenvectors=3):
     values, vectors = np.linalg.eig(square_matrix)
     values_sorted = np.sort(values)
     vector_sorted = vectors[:, values.argsort()]
-    return values_sorted, vector_sorted
+    return values_sorted[:number_of_eigenvectors], vector_sorted.transpose()[:number_of_eigenvectors]

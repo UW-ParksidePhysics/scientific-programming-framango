@@ -1,13 +1,21 @@
+__author__ = 'Frank Lauerman'
 import numpy as np
 
 
 def two_column_text_read(filename):
+    '''
+
+    :param filename:str
+    ,Name of file to be read in.
+    :return:data: ndarray, shape (2, M)
+    x-y data read in from file. M is the number of data points.
+    '''
     try:
         data = np.loadtxt(filename)
     except OSError:
         print(f'{filename} cannot be found!!')
 
-    return data
+    return data.transpose()
 
 
 if __name__ == '__main__':
