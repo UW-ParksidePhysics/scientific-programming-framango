@@ -19,7 +19,7 @@ def bivariate_statistics(data):
     return statistics
 
 
-if __name__ == __'main'__:
+if __name__ == '__main__':
     x = [2, 5, 4]
     y = [5, 3, 2]
     data = np.array([x, y])
