@@ -8,7 +8,7 @@ from equations_of_state import fit_eos
 from numpy import linspace
 import matplotlib.pyplot as plt
 
-display_graph = False
+display_graph = True
 
 
 def parse_file_name(file_name):
@@ -39,7 +39,7 @@ equilibrium_volume = fit_parameters[3]
 
 def annotate_graph(chemical_symbol, crystal_symmetry):
     bulk_modulus_gpa = bulk_modulus
-    ax.annotate(chemical_symbol, xy=(130, 0.001))
+    ax.annotate(chemical_symbol, xy=(130, 0))
 
     ax.annotate(r'$ {}\overline{{{}}} {}$'.format(crystal_symmetry[0:2],
                                                   crystal_symmetry[3],
@@ -47,7 +47,7 @@ def annotate_graph(chemical_symbol, crystal_symmetry):
                 xy=(115, 0))
 
     ax.annotate('K_0={:.6f}GPa'.format(bulk_modulus_gpa),
-                xy=(115, 0.001))
+                xy=(115, -0.001))
 
     ax.annotate('V_0={:.3f}A^3/atom'.format(equilibrium_volume),
                 xy=(115, -0.001))
@@ -80,10 +80,12 @@ eq_vol = array_2[0][array_2[1].index(min(array_2[1]))]
 annotate_graph(chemical_symbol, crystal_symmetry)
 
 fit_curve = fit_curve_array(quadratic_coefficients, min_x, max_x, number_of_points=100)
-scatter_plot, curve_plot = plot_data_with_fit(array, fit_curve, data_format="", fit_format="")
+scatter_plot, curve_plot = plot_data_with_fit(array, fit_curve, data_format="bo", fit_format="k")
 
 if display_graph:
     plt.show()
 elif not display_graph:
     plt.savefig("Lauerman.Al.Fm-3m.GGA-PBE.MurnaghanEquationOfState.png")
 
+
+print()
