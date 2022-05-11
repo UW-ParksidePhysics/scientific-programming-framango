@@ -79,10 +79,11 @@ bulk_modulus_gpa = convert_units(bulk_modulus, "rb/cb")  # 7
 eq_vol = array_2[0][array_2[1].index(min(array_2[1]))]
 annotate_graph(chemical_symbol, crystal_symmetry)
 
-fit_curve = fit_curve_array(quadratic_coefficients, min_x, max_x, data_points=100)
-scatter_plot, curve_plot = plot_data_with_fit(array, fit_curve, data_format="bo", fit_format="k")
+fit_curve = fit_curve_array(quadratic_coefficients, min_x, max_x, number_of_points=100)
+scatter_plot, curve_plot = plot_data_with_fit(array, fit_curve, data_format="", fit_format="")
 
 if display_graph:
     plt.show()
 elif not display_graph:
     plt.savefig("Lauerman.Al.Fm-3m.GGA-PBE.MurnaghanEquationOfState.png")
+
