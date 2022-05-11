@@ -2,7 +2,7 @@ __author__ = 'Adrian Sanchez'
 import numpy as np
 
 
-def fit_curve_array(quadratic_coefficients, minimum_x, maximum_x, data_points=50):
+def fit_curve_array(quadratic_coefficients, min_x, max_x, data_points=100):
     """
     :param quadratic_coefficients: ndarray, shape (3,)
     Quadratic polynomial coefficients, ordered quadratic term first, then linear term, and constant term last.
@@ -14,11 +14,11 @@ def fit_curve_array(quadratic_coefficients, minimum_x, maximum_x, data_points=50
     Number of points N to return for final fit curve. Default is 100.
     :return:
     """
-    if maximum_x < minimum_x:
+    if max_x < min_x:
         raise ArithmeticError
     if data_points <= 2:
         raise IndexError
-    x_array = np.linspace(minimum_x, maximum_x, data_points)
+    x_array = np.linspace(min_x, max_x, data_points)
     y_array = np.polyval(quadratic_coefficients, x_array)
     fit_curve = np.array((x_array, y_array))
     return
