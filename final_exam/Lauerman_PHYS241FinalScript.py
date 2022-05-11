@@ -8,7 +8,7 @@ from equations_of_state import fit_eos
 from numpy import linspace
 import matplotlib.pyplot as plt
 
-display_graph = True
+display_graph = False
 
 
 def parse_file_name(file_name):
@@ -85,6 +85,8 @@ if display_graph:
     plt.show()
 elif not display_graph:
     plt.savefig("Lauerman.Al.Fm-3m.GGA-PBE.MurnaghanEquationOfState.png")
+
+#For my Lauerman.Al.Fm-3m.GGA-PBE.MurnaghanEquationOfState.png the x and y boundaries i set do not work for some reason
 
 # ---------------------------------------------------------------------------------------------------------------------#
 from generate_matrix import generate_matrix
